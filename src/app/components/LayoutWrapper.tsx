@@ -19,7 +19,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   return (
     <>
       {/* Header */}
-      <header className="bg-primary-500 text-white shadow-md">
+      <header className="bg-primary-600 text-white shadow-md">
         {/* Desktop Header */}
         <div className="hidden md:flex items-center justify-between container mx-auto px-4 py-3">
           <Link href="/" className="flex items-center">
