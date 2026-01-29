@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "@/contexts/AuthContext";
+import { AuthProvider } from "@/context/AuthContext";
+import LayoutWrapper from "@/app/components/LayoutWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Life Link Academies",
-  description: "Official portal for Life Link Technical College",
+  title: {
+    default: "Life Link Academies",
+    template: "%s | Life Link Academies",
+  },
+  description: "Center for Digital Skills and Vocational Studies — empowering West African youth through practical tech education.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -19,7 +28,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
-          {children}
+          <LayoutWrapper>
+            {children}
+          </LayoutWrapper>
         </AuthProvider>
       </body>
     </html>
