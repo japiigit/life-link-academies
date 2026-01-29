@@ -23,7 +23,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       <div className="container mx-auto px-4 py-3 flex items-center">
         {/* Logo in white bevel area */}
         <div className="header-logo-container flex items-center mr-6">
-          <img src="/logo.svg" alt="Life Link Academies" className="h-10 w-auto" />
+          <img src="/logo.svg" alt="Life Link Academies" className="h-14 w-auto" />
           <span className="ml-2 font-bold text-gray-800">Life Link</span>
            <span className="ml-1 font-bold text-white">Academies</span>
         </div>
