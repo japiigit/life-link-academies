@@ -25,3 +25,27 @@ body {
   outline: 2px solid #0066cc;
   outline-offset: 2px;
 }
+
+
+/* Beveled left header with white logo area */
+.header-bevel {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-bevel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 228px;
+  height: 100%;
+  background: white;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  z-index: 1;
+}
+
+.header-logo-container {
+  position: relative;
+  z-index: 2;
+}
