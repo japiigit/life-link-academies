@@ -38,7 +38,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               </Link>
             ))}
             <a
-              href="/admissions"
+              href="/apply"
               className="bg-secondary-500 hover:bg-secondary-600 text-white px-5 py-2 rounded-md font-medium transition-colors"
             >
               Apply Now
@@ -87,7 +87,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               </Link>
             ))}
             <a
-              href="/admissions"
+              href="/apply"
               className="block bg-secondary-500 hover:bg-secondary-600 text-white text-center py-2 rounded-md mt-2"
               onClick={() => setIsMenuOpen(false)}
             >
