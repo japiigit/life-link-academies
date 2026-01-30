@@ -32,8 +32,8 @@ export default function NewsPage() {
             </h2>
             <p className="mt-2 text-sm text-gray-500">January 18, 2026</p>
             <p className="mt-3 text-gray-600">
-              Our Counting to Calculus (C2C) STEM initiative is now live in Ibadan, Lagos, and Kano. 
-              Over 450 students are using AI-powered lessons to master math and physics.
+              Our Counting to Calculus (C2C) STEM initiative is now live in Makurdi, Ogun, and Kogi. 
+              Students are using AI-powered lessons to master math and physics.
             </p>
             <a href="#" className="mt-3 inline-block text-secondary-500 hover:underline font-medium">
               Read more →

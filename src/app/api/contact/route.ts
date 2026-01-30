@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from 'next/server';
 import { type NextRequest } from 'next/server';
 
-// Initialize Supabase client with public anon key
+// Initialize Supabase client
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -11,32 +11,32 @@ const supabase = createClient(
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { full_name, email, phone, age, program, state, message } = body;
+    const { name, email, subject, message } = body;
 
-    if (!full_name || !phone || !program) {
+    if (!name || !email || !message) {
       return NextResponse.json(
-        { error: 'Full name, phone, and program are required' },
+        { error: 'Name, email, and message are required' },
         { status: 400 }
       );
     }
 
     const { data, error } = await supabase
-      .from('applications')
+      .from('contact_messages')
       .insert([
-        { full_name, email, phone, age, program, state, message }
+        { name, email, subject, message }
       ])
       .select();
 
     if (error) {
       console.error('Supabase insert error:', error);
       return NextResponse.json(
-        { error: 'Failed to submit application' },
+        { error: 'Failed to send message' },
         { status: 500 }
       );
     }
 
     return NextResponse.json(
-      { success: true, application: data[0] },
+      { success: true,  data: data[0] },
       { status: 200 }
     );
   } catch (err) {

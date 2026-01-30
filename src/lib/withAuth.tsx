@@ -1,16 +1,14 @@
+// src/lib/withAuth.tsx
 'use client';
 
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
-type Role = 'student' | 'staff' | 'admin' | null;
-
 export function withAuth<P extends object>(
-  WrappedComponent: React.ComponentType<P>,
-  allowedRoles: Role[] | null = null // null means any logged-in user
+  WrappedComponent: React.ComponentType<P>
 ) {
-  return function AuthenticatedComponent(props: P) {
+  return function AuthWrapper(props: P) {
     const { session, isLoading } = useAuth();
     const router = useRouter();
 
@@ -18,8 +16,7 @@ export function withAuth<P extends object>(
       if (!isLoading && !session) {
         router.push('/login');
       }
-      // Optional: role-based redirect (will enhance later)
-    }, [session, isLoading, router]);
+    }, [isLoading, session, router]);
 
     if (isLoading) {
       return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
@@ -29,7 +26,6 @@ export function withAuth<P extends object>(
       return null;
     }
 
-    // TODO: Add role check once user roles are stored
     return <WrappedComponent {...props} />;
   };
 }
