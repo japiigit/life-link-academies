@@ -16,8 +16,9 @@ module.exports = {
           600: '#388E3C',
           700: '#2E7D32',
         },
-        accent: {
+       accent: {
           500: '#F59E0B',
+          600: '#D97706',  // Add this line
         },
         success: {
           500: '#10B981',

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Sidebar from '@/app/components/Sidebar';
 
 export default function ProgramsPage() {
   const [activeSection, setActiveSection] = useState('digital-skills');
@@ -65,25 +66,13 @@ export default function ProgramsPage() {
 
   return (
     <div className="min-h-screen bg-white flex">
-      {/* Sidebar */}
-      <aside className="w-60 bg-accent-500 text-white flex-shrink-0 p-6">
-        <h2 className="text-xl font-bold mb-6">Programs</h2>
-        <nav className="space-y-3">
-          {sections.map((section) => (
-            <button
-              key={section.id}
-              onClick={() => setActiveSection(section.id)}
-              className={`block w-full text-left px-3 py-2 rounded-md transition-colors ${
-                activeSection === section.id
-                  ? 'bg-orange-600 font-medium'
-                  : 'hover:bg-orange-600/70'
-              }`}
-            >
-              {section.title}
-            </button>
-          ))}
-        </nav>
-      </aside>
+      {/* Reusable Sidebar */}
+      <Sidebar
+        title="Programs"
+        items={sections}
+        activeId={activeSection}
+        onItemSelect={setActiveSection}
+      />
 
       {/* Main Content */}
       <main className="flex-1 p-6 bg-white">
