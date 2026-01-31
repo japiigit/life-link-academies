@@ -140,13 +140,11 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         </div>
       </header>
 
-      <main>{children}</main>
+      <main className="pb-16">{children}</main>
 
-      <footer className="bg-gray-800 text-white py-6">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} Life Link Academies. All rights reserved.</p>
-        </div>
-      </footer>
+    <footer className="fixed bottom-0 left-0 w-full bg-green-600 text-white py-3 text-center z-10">
+  <p>&copy; {new Date().getFullYear()} Life Link Academies. All rights reserved.</p>
+</footer>
     </>
   );
 }
