@@ -161,10 +161,10 @@ export default function ApplyPage() {
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
             >
               <option value="">Select your state</option>
-              <option value="Lagos">Lagos</option>
-              <option value="Oyo">Oyo</option>
-              <option value="Kano">Kano</option>
-              <option value="Rivers">Rivers</option>
+              <option value="Lagos">Benue</option>
+              <option value="Oyo">Kogi</option>
+              <option value="Kano">Lagos</option>
+              <option value="Rivers">Ogun</option>
               <option value="Other">Other</option>
             </select>
           </div>
