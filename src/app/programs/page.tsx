@@ -4,87 +4,258 @@ import { useState } from 'react';
 import Sidebar from '@/app/components/Sidebar';
 
 export default function ProgramsPage() {
-  const [activeSection, setActiveSection] = useState('digital-skills');
+  const [activeSection, setActiveSection] = useState('digital-tech');
 
   const sections = [
-    { id: 'digital-skills', title: 'Digital Skills' },
-    { id: 'electronic-repairs', title: 'Electronic Repairs' },
-    { id: 'c2c', title: 'Counting to Calculus (C2C)' },
+    { id: 'digital-tech', title: 'Digital & Emerging Technology' },
+    { id: 'medical-sciences', title: 'Advanced Medical Sciences' },
+    { id: 'stem-academic', title: 'STEM & Academic Prep' },
+    { id: 'engineering-tech', title: 'Engineering & Technical' },
+    { id: 'agriculture', title: 'Modern Agriculture' },
+    { id: 'vocational-arts', title: 'Vocational Arts & Cosmetology' },
   ];
 
   const getContent = () => {
     switch (activeSection) {
-      case 'digital-skills':
+      case 'digital-tech':
         return (
           <div>
-            <h2 className="text-2xl font-bold text-gray-800">Digital Skills</h2>
-            <div className="mt-4 bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-gray-500">
-              Graphics / images for Digital Skills
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Digital & Emerging Technology</h2>
+            <div className="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-white font-bold text-xl">
+              Digital Technology Programs
             </div>
-            <p className="mt-4 text-gray-600">
-              Computer repair, networking, and IT support training for immediate employment or self-employment.
-            </p>
-            <p className="mt-2 text-gray-600">
-              This 5-month intensive program includes hands-on labs, certification prep, and job placement support.
-            </p>
+            
+            <div className="mt-6 space-y-6">
+              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">AI Literacy</h3>
+                <p className="text-gray-700 mb-2">An introductory to intermediate course on generative AI, prompt engineering, and the ethical implementation of AI in business and education.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦150,000 | Duration: 3-4 months</p>
+              </div>
+
+              <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Data Science & Analytics</h3>
+                <p className="text-gray-700 mb-2">Training in data collection, statistical analysis, and visualization tools to drive data-informed decision-making.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦150,000 | Duration: 4-5 months</p>
+              </div>
+
+              <div className="bg-cyan-50 p-6 rounded-lg border-l-4 border-cyan-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Computer Literacy</h3>
+                <p className="text-gray-700 mb-2">Essential training in operating systems, cloud productivity tools, and internet safety for the modern workplace.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦40,000 | Duration: 2 months</p>
+              </div>
+
+              <div className="bg-rose-50 p-6 rounded-lg border-l-4 border-rose-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Graphic Design</h3>
+                <p className="text-gray-700 mb-2">Creative training in visual communication, branding, and industry-standard design software (Adobe Suite/CorelDraw).</p>
+                <p className="text-gray-600 font-medium">Fee: ₦80,000 | Duration: 3 months</p>
+              </div>
+            </div>
           </div>
         );
-      case 'electronic-repairs':
+
+      case 'medical-sciences':
         return (
           <div>
-            <h2 className="text-2xl font-bold text-gray-800">Electronic Repairs</h2>
-            <div className="mt-4 bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-gray-500">
-              Graphics / images for Electronic Repairs
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Advanced Medical Sciences</h2>
+            <div className="mt-4 bg-gradient-to-r from-emerald-500 to-teal-600 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-white font-bold text-xl">
+              Medical Imaging & Health Sciences
             </div>
-            <p className="mt-4 text-gray-600">
-              Master smartphone, TV, and appliance repair to launch your own workshop or join a service center.
-            </p>
-            <p className="mt-2 text-gray-600">
-              Learn diagnostics, soldering, and component replacement using real devices from local markets.
-            </p>
+            
+            <div className="mt-6 space-y-6">
+              <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">MRI Technology</h3>
+                <p className="text-gray-700 mb-2">Advanced training in operating MRI scanners, understanding pulse sequences, and ensuring patient safety in high-magnetic environments.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦250,000 | Duration: 6-8 months</p>
+              </div>
+
+              <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">CT Scan Operations</h3>
+                <p className="text-gray-700 mb-2">Specialized instruction on Computed Tomography physics, cross-sectional anatomy, and radiation protocols for diagnostic imaging.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦250,000 | Duration: 6-8 months</p>
+              </div>
+
+              <div className="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Radiology Technician Program</h3>
+                <p className="text-gray-700 mb-2">Comprehensive foundation in X-ray positioning, film processing, and digital imaging techniques.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦200,000 | Duration: 5-6 months</p>
+              </div>
+
+              <div className="bg-violet-50 p-6 rounded-lg border-l-4 border-violet-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Nuclear Medicine Technology</h3>
+                <p className="text-gray-700 mb-2">Specialized training in the administration of radiopharmaceuticals and the use of gamma cameras for functional organ imaging.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦200,000 | Duration: 6 months</p>
+              </div>
+
+              <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Health Extension Services</h3>
+                <p className="text-gray-700 mb-2">Community-based healthcare training focusing on preventive medicine, first aid, and public health outreach.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦120,000 | Duration: 4 months</p>
+              </div>
+            </div>
           </div>
         );
-      case 'c2c':
+
+      case 'stem-academic':
         return (
           <div>
-            <h2 className="text-2xl font-bold text-gray-800">Counting to Calculus (C2C)</h2>
-            <div className="mt-4 bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-gray-500">
-              Graphics / images for C2C Program
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">STEM & Academic Preparatory</h2>
+            <div className="mt-4 bg-gradient-to-r from-amber-500 to-orange-600 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-white font-bold text-xl">
+              Academic Excellence & Foundation
             </div>
-            <p className="mt-4 text-gray-600">
-              AI-powered STEM curriculum for high school students — from basic math to advanced calculus and physics.
-            </p>
-            <p className="mt-2 text-gray-600">
-              Delivered in partnership with schools across Oyo State, using adaptive learning platforms and local tutors.
-            </p>
+            
+            <div className="mt-6 space-y-6">
+              <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Counting to Calculus (Math Pathway)</h3>
+                <p className="text-gray-700 mb-2">A structured mathematical journey covering basic arithmetic, algebra, trigonometry, and advanced calculus for university readiness.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦60,000 | Duration: 6-9 months</p>
+              </div>
+
+              <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">JAMB & WAEC Excellence</h3>
+                <p className="text-gray-700 mb-2">Targeted intensive coaching for the Unified Tertiary Matriculation Examination and West African Senior School Certificate Examination.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦45,000 per term | Duration: 3-4 months per term</p>
+              </div>
+
+              <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Applied Sciences</h3>
+                <p className="text-gray-700 mb-2">Practical-heavy instruction in Physics, Chemistry, and Math designed to help students master complex theories through laboratory-style application.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦60,000 | Duration: 5-6 months</p>
+              </div>
+            </div>
           </div>
         );
+
+      case 'engineering-tech':
+        return (
+          <div>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Engineering & Technical Services</h2>
+            <div className="mt-4 bg-gradient-to-r from-gray-500 to-zinc-700 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-white font-bold text-xl">
+              Hardware Engineering & Repairs
+            </div>
+            
+            <div className="mt-6 space-y-6">
+              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Computer Repair & Maintenance</h3>
+                <p className="text-gray-700 mb-2">Hardware diagnostics, component replacement, and software troubleshooting for laptops and desktops.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦100,000 | Duration: 4-5 months</p>
+                <p className="text-gray-600 mt-2 italic">Includes toolkits and component sets</p>
+              </div>
+
+              <div className="bg-zinc-50 p-6 rounded-lg border-l-4 border-zinc-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Electronic Device Repair</h3>
+                <p className="text-gray-700 mb-2">Specialized training in repairing mobile phones, tablets, and household electronic circuitry.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦100,000 | Duration: 4-5 months</p>
+                <p className="text-gray-600 mt-2 italic">Hands-on training with real devices from local markets</p>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'agriculture':
+        return (
+          <div>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Modern Agriculture & Sustainability</h2>
+            <div className="mt-4 bg-gradient-to-r from-green-500 to-lime-600 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-white font-bold text-xl">
+              Smart Farm & Agricultural Tech
+            </div>
+            
+            <div className="mt-6 space-y-6">
+              <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Smart Farm Technician</h3>
+                <p className="text-gray-700 mb-2">Training in the use of IoT sensors, automated irrigation, and data-driven crop management.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦130,000 | Duration: 4-5 months</p>
+              </div>
+
+              <div className="bg-lime-50 p-6 rounded-lg border-l-4 border-lime-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Agricultural Extension Technician</h3>
+                <p className="text-gray-700 mb-2">Developing the communication and technical skills needed to bring modern farming research to rural farmers.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦130,000 | Duration: 4-5 months</p>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'vocational-arts':
+        return (
+          <div>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Vocational Arts & Cosmetology</h2>
+            <div className="mt-4 bg-gradient-to-r from-pink-500 to-rose-600 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-white font-bold text-xl">
+              Creative Arts & Entrepreneurship
+            </div>
+            
+            <div className="mt-6 space-y-6">
+              <div className="bg-pink-50 p-6 rounded-lg border-l-4 border-pink-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Tailoring & Fashion Design</h3>
+                <p className="text-gray-700 mb-2">Professional garment construction, pattern drafting, and fashion illustration.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦90,000 | Duration: 4-6 months</p>
+              </div>
+
+              <div className="bg-rose-50 p-6 rounded-lg border-l-4 border-rose-500">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Cosmetology & Aesthetic Science</h3>
+                <p className="text-gray-700 mb-2">Comprehensive training in skincare, professional makeup artistry, and beauty therapy management.</p>
+                <p className="text-gray-600 font-medium">Fee: ₦90,000 | Duration: 4-6 months</p>
+              </div>
+            </div>
+          </div>
+        );
+
       default:
         return null;
     }
   };
 
   return (
-    <div className="min-h-screen bg-white flex">
+    <div className="min-h-screen bg-gray-50 flex">
       {/* Reusable Sidebar */}
       <Sidebar
-        title="Programs"
+        title="Our Programs"
         items={sections}
         activeId={activeSection}
         onItemSelect={setActiveSection}
       />
 
       {/* Main Content */}
-      <main className="flex-1 p-6 bg-white">
-        <div className="max-w-4xl">
-          {getContent()}
-          <div className="mt-8">
-            <a
-              href="/admissions"
-              className="inline-block bg-blue-700 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors"
-            >
-              Apply to This Program
-            </a>
+      <main className="flex-1 p-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
+            {getContent()}
+          </div>
+
+          {/* Call to Action */}
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4">Ready to Start Your Journey?</h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Join the LIFELINK community and gain the skills that power the future. Our hands-on training ensures you're career-ready upon graduation.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="/admissions"
+                className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
+              >
+                Apply Now
+              </a>
+              <a
+                href="/admissions#steps"
+                className="inline-block bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-colors"
+              >
+                View Admission Steps
+              </a>
+            </div>
+          </div>
+
+          {/* Payment Info */}
+          <div className="mt-8 bg-white rounded-xl shadow-sm p-6">
+            <h4 className="text-xl font-bold text-gray-800 mb-4">Payment Options</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h5 className="font-bold text-gray-800 mb-2">Full Payment Discount</h5>
+                <p className="text-gray-700">5% discount if tuition is paid in full before the start of the session.</p>
+              </div>
+              <div className="bg-green-50 p-4 rounded-lg">
+                <h5 className="font-bold text-gray-800 mb-2">Installment Plan</h5>
+                <p className="text-gray-700">60% upon admission, 40% mid-session (before final assessments).</p>
+              </div>
+            </div>
           </div>
         </div>
       </main>
