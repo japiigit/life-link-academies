@@ -48,6 +48,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   };
 
   const navItems = [
+    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Programs', href: '/programs' },
     { name: 'Admissions', href: '/admissions' },
